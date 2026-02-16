@@ -21,6 +21,7 @@ async function writeMyFile() {
   try {
     const filePath = path.join(__dirname, "myname.txt");
     await writeFile(filePath, "\nhii oyaa monawada ketuweee", { flag: "a" });
+    //use a flag or use appendFile instead of writeFile
   } catch (error) {
     console.log("Write failed:", error);
   }
@@ -29,6 +30,5 @@ async function writeMyFile() {
 console.log("--- Start ---");
 await readMyFile();
 await writeMyFile();
-console.log("--- wrote ---");
 await readMyFile();
 console.log("--- End ---");
